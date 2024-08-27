@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Arrastrar y Soltar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Juego de Arrastrar y Soltar</h1>
+
+    <div id="lives">Vidas: 3</div>
+
+    <div class="container">
+        <!-- Casillas fijas con texto -->
+        <div id="text-box-1" class="fixed-box">Lima</div>
+        <div id="text-box-2" class="fixed-box">Buenos Aires</div>
+        <div id="text-box-3" class="fixed-box">Santiago</div>
+        <div id="text-box-4" class="fixed-box">Bogotá</div>
+
+        <!-- Casillas arrastrables con imágenes -->
+        <div id="drag-box-1" class="draggable" draggable="true">
+            <img src="imagen/argentina.png" alt="Lima">
+        </div>
+        <div id="drag-box-2" class="draggable" draggable="true">
+            <img src="imagen/peru.png" alt="Buenos Aires">
+        </div>
+        <div id="drag-box-3" class="draggable" draggable="true">
+            <img src="imagen/brazil.png" alt="Santiago">
+        </div>
+        <div id="drag-box-4" class="draggable" draggable="true">
+            <img src="imagen/chile.png" alt="Bogotá">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

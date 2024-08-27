@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+#lives {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 200px); /* Ampliar el espacio de las columnas */
+    grid-template-rows: repeat(2, 200px); /* Ampliar el espacio de las filas */
+    gap: 20px; /* Ampliar el espacio entre las casillas */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.fixed-box, .draggable {
+    width: 200px; /* Aumentar el tamaño de las casillas */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+.fixed-box {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.draggable img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fixed-box.over, .draggable.over {
+    border-color: green;
+    box-shadow: 0 0 15px green; /* Contorno con sombra verde */
+}
+
+.fixed-box.dragging, .draggable.dragging {
+    border-color: blue;
+    box-shadow: 0 0 15px blue; /* Contorno con sombra azul cuando se arrastra */
+}
+
+.fixed-box img {
+    font-size: 24px;
+    font-weight: bold; /* Ocultar imágenes en las casillas fijas */
+}
+
+.draggable {
+    position: relative;
+}
+
+.draggable img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.draggable:hover {
+    border-color: orange;
+    box-shadow: 0 0 15px orange; /* Contorno con sombra naranja cuando el cursor está sobre la imagen */
+}
